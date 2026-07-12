@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planet - Special Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'EB Garamond', Georgia, serif;
+            background: #e8e4d8;
+        }
+        
+        .newspaper {
+            max-width: 1280px;
+            margin: 40px auto;
+            background: #fffef7;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            border: 14px solid #111;
+            overflow: hidden;
+        }
+        
+        .masthead {
+            background: #111;
+            color: white;
+            padding: 1.5rem 2rem;
+        }
+        
+        .headline {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+        
+        .column {
+            column-count: 2;
+            column-gap: 3rem;
+            column-rule: 1px solid #ddd;
+        }
+        
+        @media (min-width: 1024px) {
+            .column {
+                column-count: 3;
+            }
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('./images/krypto-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 480px;
+        }
+    </style>
+</head>
+<body class="bg-[#d4cfc0] py-6 md:py-12">
+    <div class="newspaper mx-auto rounded-sm">
+        
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <!-- === REPLACE WITH YOUR DAILY PLANET LOGO === -->
+                    <img src="./images/daily-planet-logo.png" 
+                         alt="Daily Planet Logo" 
+                         class="w-16 h-16 object-contain">
+                    
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black tracking-[-2px]">DAILY PLANET</h1>
+                        <p class="text-xs md:text-sm tracking-widest text-gray-400">METROPOLIS • EST. 1885</p>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right text-xs md:text-sm">
+                    <div class="font-medium">JULY 12, 2026 • SPECIAL EDITION</div>
+                    <div class="text-amber-400">VOL. 142 • NO. 89</div>
+                </div>
+            </div>
+            
+            <div class="h-1.5 bg-red-600 my-5"></div>
+            
+            <div class="flex flex-wrap justify-between text-xs uppercase gap-y-2">
+                <div><i class="fas fa-sun mr-1"></i> Sunny • 82°F</div>
+                <div>$2.00</div>
+                <div>Voice of Metropolis</div>
+            </div>
+        </header>
+
+        <!-- Main Headline -->
+        <div class="px-6 md:px-16 pt-10 pb-8 text-center border-b border-gray-300">
+            <span class="inline-block bg-red-700 text-white text-sm font-bold tracking-widest px-8 py-2 mb-6">
+                EXCLUSIVE • HEROES OF METROPOLIS
+            </span>
+            <h1 class="headline text-black max-w-4xl mx-auto">
+                KRYPTO IS THE COOLEST HERO IN THE UNIVERSE
+            </h1>
+            <p class="text-2xl md:text-3xl text-red-800 mt-4 font-medium">
+                Lex Luthor? Just takes another L lol
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-px bg-black"></div>
+                    <span class="font-semibold">By Lois Lane</span>
+                </div>
+                <div class="text-gray-500">•</div>
+                <div>Photos by Jimmy Olsen</div>
+            </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="hero relative flex items-end">
+            <div class="absolute top-6 right-6 bg-white px-5 py-2 text-sm font-bold shadow-xl rotate-6 border-2 border-black">
+                THE REAL HERO
+            </div>
+            <div class="p-8 md:p-12 text-white max-w-2xl">
+                <div class="uppercase tracking-[3px] text-sm mb-3">Superdog in action</div>
+                <div class="text-4xl md:text-5xl font-bold leading-none">KRYPTO SAVES THE DAY<br>ONCE AGAIN</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 px-6 md:px-16 py-12">
+            
+            <!-- Main Content -->
+            <div class="lg:col-span-8 space-y-12">
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg leading-relaxed">
+                        While Lex Luthor keeps wasting billions on ridiculous failed plans, 
+                        <strong class="text-red-700">Krypto flies in, barks, and saves Metropolis</strong> with style.
+                    </p>
+                    
+                    <div class="my-10 border-l-4 border-red-700 pl-8 italic text-xl">
+                        "Krypto doesn't need money or ego. He just needs a good flight and to save the day."
+                        <span class="block text-base mt-4 not-italic font-medium">— Superman</span>
+                    </div>
+
+                    <div class="column">
+                        <p>
+                            The Kryptonian superdog has once again proven why he's the city's favorite hero. 
+                            Yesterday he single-handedly destroyed an entire fleet of LexCorp drones in under a minute.
+                        </p>
+                        <p class="mt-6">
+                            Unlike a certain bald billionaire who keeps losing, Krypto is loyal, brave, and incredibly cool. 
+                            His wagging tail has saved more lives than all of Lex Luthor's plans combined.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image placeholders -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Lex Image -->
+                    <div>
+                        <div class="relative">
+                            <img src="./images/lex-luthor.jpg" 
+                                 alt="Lex Luthor" 
+                                 class="w-full h-80 object-cover rounded-xl shadow-inner">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-6 rounded-b-xl">
+                                <div class="uppercase text-red-400 text-xs mb-1">VILLAIN OF THE WEEK</div>
+                                <div class="font-bold text-2xl">Lex Luthor</div>
+                                <div class="text-sm opacity-75">Another humiliating defeat</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Krypto Image -->
+                    <div>
+                        <img src="./images/krypto.jpg" 
+                             alt="Krypto the Superdog" 
+                             class="w-full h-80 object-cover rounded-xl shadow-inner">
+                        <p class="text-center mt-4 text-sm font-medium text-green-700">KRYPTO • ALWAYS READY TO SAVE THE DAY</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-4 space-y-10">
+                <div class="bg-zinc-900 text-white p-8 rounded-xl">
+                    <h3 class="text-red-500 uppercase tracking-widest text-sm mb-6">Why Krypto Wins</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <span class="text-3xl">🐾</span>
+                            <div>
+                                <div class="font-semibold">Real Superpowers</div>
+                                <div class="text-sm text-gray-400">Heat vision, flight, super strength</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-3xl">❤️</span>
+                            <div>
+                                <div class="font-semibold">Maximum Loyalty</div>
+                                <div class="text-sm text-gray-400">Never betrays his friends</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-3xl">😎</span>
+                            <div>
+                                <div class="font-semibold">Unbeatable Style</div>
+                                <div class="text-sm text-gray-400">Shining white fur</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-2 border-black p-7 bg-white">
+                    <div class="text-5xl mb-4">🤡</div>
+                    <h3 class="font-bold text-2xl mb-3">Lex Luthor</h3>
+                    <p class="text-lg italic">"I'm a genius..."</p>
+                    <p class="mt-8 text-sm text-gray-500">— Said the man who keeps losing to a dog</p>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-300 p-6 text-center">
+                    <div class="text-amber-800 font-black text-xl">KRYPTO TREATS™</div>
+                    <p class="text-sm mt-3">Official snack of Metropolis' favorite superhero</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-black text-gray-300 py-8 px-8 md:px-16 text-xs flex flex-col md:flex-row justify-between items-center gap-4 border-t-4 border-red-600">
+            <div>© 2026 Daily Planet • Metropolis</div>
+            <div class="font-medium text-red-500">KRYPTO &gt; LEX • ALWAYS</div>
+            <div class="flex items-center gap-6 text-lg">
+                <i class="fab fa-twitter hover:text-white cursor-pointer"></i>
+                <i class="fab fa-instagram hover:text-white cursor-pointer"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        console.log('%c✅ Daily Planet ready! Just replace the images in the ./images/ folder.', 'color: #c00; font-size: 14px;');
+    </script>
+</body>
+</html>
